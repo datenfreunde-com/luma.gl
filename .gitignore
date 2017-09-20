@@ -1,6 +1,5 @@
 build/*
-dist/*
-dist-es6/*
+
 dist-min/*
 dist-buble/*
 **/dist/*
