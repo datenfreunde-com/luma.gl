@@ -73,19 +73,21 @@ export const VERSION_DEFINES = `\
 #endif
 
 // DERIVATIVES => dxdF, dxdY and fwidth are available
-#ifdef GL_OES_standard_derivatives
-#extension GL_OES_standard_derivatives : enable
-# define DERIVATIVES
-#endif
+// deactivated for IE11 compat reasons
+//#ifdef GL_OES_standard_derivatives
+//#extension GL_OES_standard_derivatives : enable
+//# define DERIVATIVES
+//#endif
 #if (__VERSION__ > 120)
 # define DERIVATIVES
 #endif
 
 // DRAW_BUFFERS => gl_FragData[] is available
-#ifdef GL_EXT_draw_buffers
-#extension GL_EXT_draw_buffers : require
-#define DRAW_BUFFERS
-#endif
+// deactivated for IE11 compat reasons
+//#ifdef GL_EXT_draw_buffers
+//#extension GL_EXT_draw_buffers : require
+//#define DRAW_BUFFERS
+//#endif
 #if (__VERSION__ > 120)
 # define DRAW_BUFFERS
 #endif
